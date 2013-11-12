@@ -16,6 +16,7 @@
 </head>
 <body <?php body_class(); ?>>
 
+<?php if ( !is_page( array( 'new-registry-request' ) ) ) : ?>
 <div id="header">
 
 	<div class="sleeve">
@@ -29,3 +30,4 @@
 </div>
 
 <div id="wrapper">
+<?php endif; ?>
