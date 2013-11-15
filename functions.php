@@ -1,5 +1,20 @@
 <?php
 
+// p2 by email per http://wordpress.org/plugins/p2-by-email/installation/
+
+add_filter( 'p2be_email_replies_enabled', '__return_true' );
+add_filter( 'p2be_emails_reply_to_email', function( $email ) {
+    return 'XXXX@XXX.XXX';
+});
+add_filter( 'p2be_imap_connection_details', function( $details ) {
+
+    $details['host'] = '{XXX.XXX.XXX:993}';
+    $details['username'] = 'XXX@XXX.XXX';
+    $details['password'] = 'XXXXXX';
+
+    return $details;
+} );
+
 // make site private and redirect to registration page
 
 function is_login_page() {
